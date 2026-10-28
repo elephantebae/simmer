@@ -26,3 +26,8 @@ variable "budget_alert_email" {
   type        = string
   sensitive   = true
 }
+
+variable "state_bucket" {
+  description = "Name of the Terraform state bucket (created outside Terraform). Set in terraform.tfvars / TF_VAR_state_bucket."
+  type        = string
+}
