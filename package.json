@@ -1,0 +1,16 @@
+{
+  "name": "simmer",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Household-first cooking PWA on AWS: recipe import, cook mode with timers, pantry photos, grocery list.",
+  "license": "MIT",
+  "workspaces": ["web", "api"],
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "check-privacy": "node scripts/check-privacy.mjs",
+    "lint": "npm run lint --workspaces",
+    "typecheck": "npm run typecheck --workspaces",
+    "test": "npm run check-privacy && npm test --workspaces",
+    "prepare": "node -e \"require('fs').existsSync('.git') && require('child_process').execSync('git config core.hooksPath .githooks')\""
+  }
+}

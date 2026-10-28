@@ -1,0 +1,3 @@
+#!/bin/sh
+# Block commits that would put personal data or secrets into this public repo.
+node scripts/check-privacy.mjs || exit 1
